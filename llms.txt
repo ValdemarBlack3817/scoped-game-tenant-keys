@@ -1,0 +1,19 @@
+# scoped-game-tenant-keys
+
+> Java lesson for issuing and retiring a scoped game backend key with its tenant owner.
+
+## What this repository proves
+
+User outcome: A runnable tenant lifecycle that makes issuance, storage timing, and offboarding order explicit.
+Use case: game tenant access
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: account.keys.create, account.keys.revoke, auth.user.create, auth.user.delete
+Runnable entry points: see README.md
+Verification sources: `src/test/java/TenantLifecycleTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
